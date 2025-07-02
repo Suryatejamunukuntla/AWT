@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Armstrong</title>
+   <script>
+
+    function f(){
+    let a=parseInt(document.getElementById("num1").value)
+    let result=a;
+    let rem=0;
+    let l=a.toString().length
+    let x=0
+   while(result>0){
+    rem=result%10;
+    x+=rem ** l;
+    result=Math.floor(result/10);
+   }
+if(x===a)
+    document.getElementById("res").innerHTML="result = True (It is armstrong number)";
+   else 
+   document.getElementById("res").innerHTML="result = false (It is not armstrong number)";
+
+
+}
+   </script>
+</head>
+<body>
+    
+    <label for="num1">ENTER THE NUMBER</label><br>
+    <input type="number"  id="num1"><br><br>
+    <button type="button" onclick="f()">check</button>
+    <p id="res"></p>
+</body>
+</html>
